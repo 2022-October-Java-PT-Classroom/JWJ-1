@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="VirtualPetTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-17T00:59:15" hostname="WECANCODEIT-201" time="0.066">
+  <properties/>
+  <testcase name="shouldBeAbleToAddPetToShelter()" classname="VirtualPetTest" time="0.066"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
