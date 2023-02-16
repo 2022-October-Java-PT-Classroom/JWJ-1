@@ -36,6 +36,7 @@ public class VirtualPet {
         hunger++;
         boredom++;
         thirst++;
+        health--;
     }
 
     public String getName() {

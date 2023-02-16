@@ -139,6 +139,16 @@ public class Shelter {
                 System.out.println(pet.getName() + " Health is greater than 8 ");
             }
         }
+    }
+    //Method that plays with all pets
+    public void playWithAllPets(){
+
+            for (VirtualPet pet : shelter.values()) {
+                pet.playWithPet();
+                System.out.println("Played with " + pet.getName());
+            }
+
+
 
 
     }
