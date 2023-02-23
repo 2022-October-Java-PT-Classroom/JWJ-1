@@ -2,15 +2,11 @@ package org.example;
 
 public class Circle extends Shape {
 
-    protected double area;
-    protected double perimeter;
     private double radius;
 
     public Circle(double radius) {
         super();
         this.radius = radius;
-        this.area = area;
-        this.perimeter = perimeter;
     }
 
     public double getRadius() {
@@ -18,25 +14,19 @@ public class Circle extends Shape {
     }
 
     public double getArea() {
-        return area;
-
+        return Math.PI * Math.pow(radius, 2);
     }
 
     public double getPerimeter() {
-        return perimeter;
-
+        return 2 * Math.PI * radius;
     }
 
     public boolean isCircle() {
-        if (radius > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return true;
     }
 
+    @Override
     public String toString() {
         return "A Circle with radius=" + radius + ", which is a subclass of " + super.toString();
     }
 }
-
