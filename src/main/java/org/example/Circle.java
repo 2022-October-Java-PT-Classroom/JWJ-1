@@ -1,14 +1,13 @@
 package org.example;
 
-import java.awt.geom.Area;
-
 public class Circle extends Shape {
 
     protected double area;
     protected double perimeter;
     private double radius;
 
-    public Circle(double radius, double area, double perimeter) {
+    public Circle(double radius) {
+        super();
         this.radius = radius;
         this.area = area;
         this.perimeter = perimeter;
@@ -29,12 +28,15 @@ public class Circle extends Shape {
     }
 
     public boolean isCircle() {
-        return true;
-
+        if (radius > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public String toString() {
-        return "A circle with radius" + radius
+        return "A Circle with radius=" + radius + ", which is a subclass of " + super.toString();
     }
 }
 
