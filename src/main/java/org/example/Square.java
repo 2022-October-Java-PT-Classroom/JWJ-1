@@ -1,24 +1,27 @@
 package org.example;
 
-public class Square extends Quadrilateral {
-    private double side;
-
-    public Square(double side) {
-        super(side, side, side, side);
-        this.side = side;
-        this.perimeter = 4 * side;
-        this.area = Math.pow(side, 2);
+public class Square extends Polygon {
+    public Square(double sideLength) {
+        super(4, new double[] {sideLength, sideLength, sideLength, sideLength});
     }
 
-    public double getSide() {
-        return side;
+    @Override
+    public double getArea() {
+        return Math.pow(getSideLengths()[0], 2);
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 4 * getSideLengths()[0];
     }
 
     public boolean isSquare() {
-        return side1 == side2 && side2 == side3 && side3 == side4 && side4 == side;
+        return true;
     }
 
+    @Override
     public String toString() {
-        return "Square";
+        return "A Square with side " + getSideLengths()[0] + ", which is a subclass of " + super.toString();
     }
 }
+

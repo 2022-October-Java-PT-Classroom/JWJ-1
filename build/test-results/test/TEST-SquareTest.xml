@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SquareTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-24T04:42:13" hostname="DESKTOP-NTN3AHR" time="0.012">
-  <properties/>
-  <testcase name="shouldReturnPerimeterOfSquare()" classname="SquareTest" time="0.012"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

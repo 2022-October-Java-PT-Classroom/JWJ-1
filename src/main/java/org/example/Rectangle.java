@@ -1,31 +1,26 @@
 package org.example;
 
-public class Rectangle extends Quadrilateral {
-    private double width;
-    private double length;
-
-    public Rectangle(double width, double length) {
-        super(width, length, width, length);
-        this.width = width;
-        this.length = length;
-        this.perimeter = 2 * (width + length);
-        this.area = width * length;
+public class Rectangle extends Polygon {
+    public Rectangle(double length, double width) {
+        super(4, new double[] {length, width, length, width});
     }
 
-    public double getWidth() {
-        return width;
+    @Override
+    public double getArea() {
+        return getSideLengths()[0] * getSideLengths()[1];
     }
 
-    public double getLength() {
-        return length;
-    }
-
-    public String toString() {
-        return "Rectangle";
+    @Override
+    public double getPerimeter() {
+        return 2 * (getSideLengths()[0] + getSideLengths()[1]);
     }
 
     public boolean isRectangle() {
         return true;
+    }
+    @Override
+    public String toString() {
+        return "A Rectangle with sides " + getSideLengths()[0] + " and " + getSideLengths()[1] + ", which is a subclass of " + super.toString();
     }
 }
 
