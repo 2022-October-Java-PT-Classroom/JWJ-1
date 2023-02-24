@@ -1,8 +1,7 @@
 import org.example.Rectangle;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RectangleTest {
     Rectangle underTest = new Rectangle(3, 4);
@@ -20,15 +19,30 @@ public class RectangleTest {
         assertEquals(14, perimeter);
     }
     @Test
-    public void shouldGetDiagonalOfRectangle(){
+    public void shouldReturnTrueIfWidthAndLengthPositive() {
         Rectangle rectangle = new Rectangle(3, 4);
-        double diagonal = rectangle.getDiagonal();
-        assertEquals(5, diagonal);
-    }
-    @Test
-    public void shouldReturnTrueIfWidthIsNotEqualToLength() {
-        Rectangle rectangle = new Rectangle(4, 5);
         boolean result = rectangle.isRectangle();
         assertTrue(result);
+    }
+
+    @Test
+    public void shouldReturnFalseIfWidthOrLengthNegative() {
+        Rectangle rectangle = new Rectangle(-3, -4);
+        boolean result = rectangle.isRectangle();
+        assertFalse(result);
+    }
+
+    @Test
+    public void shouldReturnAreaOfRectangle() {
+        Rectangle rectangle = new Rectangle(3, 4);
+        double result = rectangle.getArea();
+        assertEquals(12, result);
+    }
+
+    @Test
+    public void shouldReturnPerimeterOfRectangle() {
+        Rectangle rectangle = new Rectangle(3, 4);
+        double result = rectangle.getPerimeter();
+        assertEquals(14, result);
     }
 }

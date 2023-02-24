@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CircleTest {
 
-    Circle underTest = new Circle(1);
+    Circle underTest = new Circle(2);
 
     @Test
     public void shouldGetRadiusOfCircle(){
@@ -15,14 +15,18 @@ public class CircleTest {
     }
     @Test
     public void shouldGetAreaOfCircle(){
-        double area = underTest.getArea();
-        assertEquals(2,area);
+        Circle circle = new Circle(2);
+        double area = circle.getArea();
+        assertEquals(Math.PI * 4, area);
     }
+
     @Test
-    public void shouldGetPerimeterOfCircle(){
-        double perimeter = underTest.getPerimeter();
-        assertEquals(3, perimeter);
+    public void shouldReturnPerimeterOfCircle() {
+        Circle circle = new Circle(2);
+        double result = circle.getPerimeter();
+        assertEquals(2 * Math.PI * 2, result);
     }
+
     @Test
     public void shouldReturnTrueIfRadiusIsPositive() {
         Circle circle = new Circle(2.0);

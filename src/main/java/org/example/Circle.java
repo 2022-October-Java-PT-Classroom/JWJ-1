@@ -1,6 +1,6 @@
 package org.example;
 
-public class Circle extends Shape {
+public class Circle extends Quadrilateral {
 
     private double radius;
 
