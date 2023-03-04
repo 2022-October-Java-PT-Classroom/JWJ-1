@@ -10,7 +10,7 @@ public class Address {
     @Id
     @GeneratedValue
     private Long id;
-    @ManyToOne(mappedBy = "employee")
+    @ManyToOne(mappedBy = "address")
     private Employee employee;
 
     private String line1;
