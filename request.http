@@ -1,0 +1,17 @@
+GET http://localhost:8080/api/employees
+
+GET http://localhost:8080/api/addresses
+
+GET http://localhost:8080/api/projects
+
+GET http://localhost:8080/api/employees?lastName=Holland
+
+GET http://localhost:8080/api/employees/1
+
+GET http://localhost:8080/api/projects/1
+
+GET http://localhost:8080/api/addresses?county=Hamilton&state=TN
+
+GET http://localhost:8080/api/employees?firstName=Henry
+
+GET http://localhost:8080/api/employees?projectId=1

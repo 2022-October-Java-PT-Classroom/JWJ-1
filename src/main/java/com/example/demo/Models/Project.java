@@ -12,6 +12,12 @@ public class Project {
     private Long projectId;
     private String projectName;
 
+
+    public Project(long l, String projectName) {
+        this.projectId = projectId;
+        this.projectName = projectName;
+    }
+
     public Long getProjectId() {
         return projectId;
     }

@@ -1,31 +1,35 @@
 package com.example.demo.Models;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
 public class EmployeeProject {
-
-    @Id
-    @GeneratedValue
     private Long employeeProjectId;
+    private String employeeName;
+    private String projectName;
 
-    @ManyToOne(mappedBy = "project")
-    private Employee employee;
+    public EmployeeProject(Long employeeProjectId, String employeeName, String projectName) {
+        this.employeeProjectId = employeeProjectId;
+        this.employeeName = employeeName;
+        this.projectName = projectName;
+    }
 
-    @ManyToOne
-    private Project project;
+    public EmployeeProject(Employee employee2, Project project2) {
+    }
+
+    public EmployeeProject(long employeeProjectId, Employee employee1, Project project1) {
+    }
 
     public Long getEmployeeProjectId() {
         return employeeProjectId;
     }
 
-    public Employee getEmployee() {
-        return employee;
+    public String getEmployeeName() {
+        return employeeName;
     }
 
-    public Project getProject() {
-        return project;
+    public String getProjectName() {
+        return projectName;
     }
 }
+
+

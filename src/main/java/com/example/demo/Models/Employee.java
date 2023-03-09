@@ -9,13 +9,19 @@ import javax.persistence.OneToMany;
 public class Employee {
     @Id
     @GeneratedValue
-    private Long id;
+    private String id;
     private String name;
     @OneToMany(mappedBy = "address")
     private String address;
 
 
-    public Long getId() {
+    public Employee(String id, String name, String address, String chicago, String il, String s) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+    }
+
+    public String getId() {
         return id;
     }
 
